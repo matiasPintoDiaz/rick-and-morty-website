@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send(`Estamos en /${req.baseUrl}`)
+  res.send(`Estamos en /`);
 });
 
 app.use('/rick&morty', router);
 
 app.listen(PORT, () => {
-    console.log(`Conectados en ${PORT}`);
+  console.log(`Conectados en ${PORT}`);
 });
