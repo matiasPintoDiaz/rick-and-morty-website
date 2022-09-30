@@ -1,18 +1,11 @@
 const express = require("express");
 const router = express.Router(); // Para modularizazr las rutas
+const tempController = require('../controllers/tempController');
 
 router
-  .get("/", (req, res) => {
-    res.send("root get");
-  })
-  .get("/character", (req, res) => {
-    res.send("character get");
-  })
-  .get("/location", (req, res) => {
-    res.send("location get");
-  })
-  .get("/episode", (req, res) => {
-    res.send("episode get");
-  });
+  .get("/", )
+  .get("/character", tempController.getAllCharacters)
+  .get("/location", tempController.getAllLocations)
+  .get("/episode", tempController.getAllEpisodes);
 
 module.exports = router;

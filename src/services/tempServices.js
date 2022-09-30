@@ -6,8 +6,8 @@ const getAllCharacters = () => {
 };
 
 const getAllLocations = () => {
-    const allLocartions = axios.get('');
-    return allLocartions;
+    const allLocations = axios.get('');
+    return allLocations;
 };
 
 const getAllEpisodes = () => {
