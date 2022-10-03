@@ -1,18 +1,18 @@
 const tempServices = require('../services/tempServices');
 
-const getAllCharacters = (req, res) => {
-    const allCharacters = tempServices.getAllCharacters();
-    return allCharacters;
+const getAllCharacters = async(req, res) => {
+    const allCharacters = await tempServices.getAllCharacters();
+    res.send(allCharacters);
 };
 
-const getAllLocations = (req, res) => {
-    const allLocations = tempServices.getAllLocations();
-    return allLocations;
+const getAllLocations = async(req, res) => {
+    const allLocations = await tempServices.getAllLocations();
+    res.send(allLocations);
 };
 
-const getAllEpisodes = (req, res) => {
-    const allEpisodes = tempServices.getAllEpisodes();
-    return allEpisodes;
+const getAllEpisodes = async(req, res) => {
+    const allEpisodes = await tempServices.getAllEpisodes();
+    res.send(allEpisodes);
 };
 
 module.exports = {
