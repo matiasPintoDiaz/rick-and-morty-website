@@ -5,7 +5,10 @@ const tempController = require('../controllers/tempController');
 router
   .get("/", )
   .get("/character", tempController.getAllCharacters)
+  .get("/character/:characterId", tempController.getOneCharacter)
   .get("/location", tempController.getAllLocations)
-  .get("/episode", tempController.getAllEpisodes);
+  .get("/location/:locationId", tempController.getOneLocation)
+  .get("/episode", tempController.getAllEpisodes)
+  .get("/episode/:episodeId", tempController.getOneEpisode);
 
 module.exports = router;
