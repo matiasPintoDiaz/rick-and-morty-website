@@ -5,14 +5,14 @@ const getAllCharacters = async (req, res) => {
   res.send(allCharacters);
 };
 
-const getOneCharacter = (req, res) => {
+const getOneCharacter = async (req, res) => {
   const { characterId } = req.params;
 
   if (!characterId) {
     return;
   }
 
-  const oneCharacter = tempServices.getOneCharacter(characterId);
+  const oneCharacter = await tempServices.getOneCharacter(characterId);
   res.send({ status: "OK", data: oneCharacter });
 };
 
@@ -28,7 +28,7 @@ const getOneLocation = async (req, res) => {
     return;
   }
 
-  const oneLocation = tempServices.getOneLocation(locationId);
+  const oneLocation = await tempServices.getOneLocation(locationId);
   res.send({ status: "OK", data: oneLocation });
 };
 
@@ -44,7 +44,7 @@ const getOneEpisode = async (req, res) => {
     return;
   }
 
-  const oneEpisode = tempServices.getOneEpisode(episodeId);
+  const oneEpisode = await tempServices.getOneEpisode(episodeId);
   res.send({ status: "OK", data: oneEpisode });
 };
 
